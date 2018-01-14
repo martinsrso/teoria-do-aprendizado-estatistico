@@ -1,0 +1,64 @@
+/usr/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+[INFO] describing images...
+Original shape: (1000, 512)
+PCA shape: (850, 198)
+# Tuning hyper-parameters for accuracy
+
+Best parameters set found on development set:
+
+{'coef0': 1, 'degree': 5, 'gamma': 0.001, 'kernel': 'poly'}
+
+Grid scores on development set:
+
+0.825 (+/-0.067) for {'coef0': 0, 'gamma': 0.01, 'kernel': 'linear'}
+0.825 (+/-0.067) for {'coef0': 0, 'gamma': 0.001, 'kernel': 'linear'}
+0.825 (+/-0.067) for {'coef0': 0, 'gamma': 0.0001, 'kernel': 'linear'}
+0.825 (+/-0.067) for {'coef0': 1, 'gamma': 0.01, 'kernel': 'linear'}
+0.825 (+/-0.067) for {'coef0': 1, 'gamma': 0.001, 'kernel': 'linear'}
+0.825 (+/-0.067) for {'coef0': 1, 'gamma': 0.0001, 'kernel': 'linear'}
+0.796 (+/-0.066) for {'coef0': 0, 'degree': 2, 'gamma': 0.01, 'kernel': 'poly'}
+0.593 (+/-0.064) for {'coef0': 0, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+0.506 (+/-0.000) for {'coef0': 0, 'degree': 2, 'gamma': 0.0001, 'kernel': 'poly'}
+0.869 (+/-0.054) for {'coef0': 0, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+0.524 (+/-0.038) for {'coef0': 0, 'degree': 3, 'gamma': 0.001, 'kernel': 'poly'}
+0.506 (+/-0.000) for {'coef0': 0, 'degree': 3, 'gamma': 0.0001, 'kernel': 'poly'}
+0.760 (+/-0.118) for {'coef0': 0, 'degree': 4, 'gamma': 0.01, 'kernel': 'poly'}
+0.514 (+/-0.018) for {'coef0': 0, 'degree': 4, 'gamma': 0.001, 'kernel': 'poly'}
+0.506 (+/-0.000) for {'coef0': 0, 'degree': 4, 'gamma': 0.0001, 'kernel': 'poly'}
+0.716 (+/-0.088) for {'coef0': 0, 'degree': 5, 'gamma': 0.01, 'kernel': 'poly'}
+0.509 (+/-0.015) for {'coef0': 0, 'degree': 5, 'gamma': 0.001, 'kernel': 'poly'}
+0.506 (+/-0.000) for {'coef0': 0, 'degree': 5, 'gamma': 0.0001, 'kernel': 'poly'}
+0.881 (+/-0.046) for {'coef0': 1, 'degree': 2, 'gamma': 0.01, 'kernel': 'poly'}
+0.879 (+/-0.038) for {'coef0': 1, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+0.846 (+/-0.078) for {'coef0': 1, 'degree': 2, 'gamma': 0.0001, 'kernel': 'poly'}
+0.891 (+/-0.049) for {'coef0': 1, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+0.884 (+/-0.048) for {'coef0': 1, 'degree': 3, 'gamma': 0.001, 'kernel': 'poly'}
+0.849 (+/-0.093) for {'coef0': 1, 'degree': 3, 'gamma': 0.0001, 'kernel': 'poly'}
+0.887 (+/-0.040) for {'coef0': 1, 'degree': 4, 'gamma': 0.01, 'kernel': 'poly'}
+0.892 (+/-0.036) for {'coef0': 1, 'degree': 4, 'gamma': 0.001, 'kernel': 'poly'}
+0.854 (+/-0.092) for {'coef0': 1, 'degree': 4, 'gamma': 0.0001, 'kernel': 'poly'}
+0.879 (+/-0.053) for {'coef0': 1, 'degree': 5, 'gamma': 0.01, 'kernel': 'poly'}
+0.894 (+/-0.048) for {'coef0': 1, 'degree': 5, 'gamma': 0.001, 'kernel': 'poly'}
+0.861 (+/-0.060) for {'coef0': 1, 'degree': 5, 'gamma': 0.0001, 'kernel': 'poly'}
+0.845 (+/-0.075) for {'coef0': 0, 'gamma': 0.01, 'kernel': 'rbf'}
+0.889 (+/-0.037) for {'coef0': 0, 'gamma': 0.001, 'kernel': 'rbf'}
+0.845 (+/-0.092) for {'coef0': 0, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.845 (+/-0.075) for {'coef0': 1, 'gamma': 0.01, 'kernel': 'rbf'}
+0.889 (+/-0.037) for {'coef0': 1, 'gamma': 0.001, 'kernel': 'rbf'}
+0.845 (+/-0.092) for {'coef0': 1, 'gamma': 0.0001, 'kernel': 'rbf'}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+             precision    recall  f1-score   support
+
+          0       0.76      0.87      0.81        70
+          1       0.87      0.76      0.81        80
+
+avg / total       0.82      0.81      0.81       150
+
+
+python imagenet.py  102.65s user 0.76s system 100% cpu 1:42.61 total

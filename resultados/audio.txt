@@ -1,0 +1,70 @@
+audio.py:11: FutureWarning: from_csv is deprecated. Please use read_csv(...) instead. Note that some of the default arguments are different, so please refer to the documentation for from_csv when changing your function calls
+  data = pd.DataFrame.from_csv('./msd_genre_dataset.txt', index_col=1)
+Original shape: (9269, 30)
+[0 0 0 ... 0 0 1]
+
+PCA shape: (4634, 22)
+
+# Tuning hyper-parameters for accuracy
+
+Fitting 10 folds for each of 36 candidates, totalling 360 fits
+
+[Parallel(n_jobs=1)]: Done 360 out of 360 | elapsed:  6.0min finished
+Best parameters set found on development set:
+
+{'coef0': 1, 'degree': 5, 'gamma': 0.01, 'kernel': 'poly'}
+
+Grid scores on development set:
+
+0.790 (+/-0.035) for {'coef0': 0, 'gamma': 0.01, 'kernel': 'linear'}
+0.790 (+/-0.035) for {'coef0': 0, 'gamma': 0.001, 'kernel': 'linear'}
+0.790 (+/-0.035) for {'coef0': 0, 'gamma': 0.0001, 'kernel': 'linear'}
+0.790 (+/-0.035) for {'coef0': 1, 'gamma': 0.01, 'kernel': 'linear'}
+0.790 (+/-0.035) for {'coef0': 1, 'gamma': 0.001, 'kernel': 'linear'}
+0.790 (+/-0.035) for {'coef0': 1, 'gamma': 0.0001, 'kernel': 'linear'}
+0.679 (+/-0.037) for {'coef0': 0, 'degree': 2, 'gamma': 0.01, 'kernel': 'poly'}
+0.531 (+/-0.000) for {'coef0': 0, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+0.531 (+/-0.000) for {'coef0': 0, 'degree': 2, 'gamma': 0.0001, 'kernel': 'poly'}
+0.592 (+/-0.024) for {'coef0': 0, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+0.531 (+/-0.000) for {'coef0': 0, 'degree': 3, 'gamma': 0.001, 'kernel': 'poly'}
+0.531 (+/-0.000) for {'coef0': 0, 'degree': 3, 'gamma': 0.0001, 'kernel': 'poly'}
+0.535 (+/-0.008) for {'coef0': 0, 'degree': 4, 'gamma': 0.01, 'kernel': 'poly'}
+0.531 (+/-0.000) for {'coef0': 0, 'degree': 4, 'gamma': 0.001, 'kernel': 'poly'}
+0.531 (+/-0.000) for {'coef0': 0, 'degree': 4, 'gamma': 0.0001, 'kernel': 'poly'}
+0.532 (+/-0.005) for {'coef0': 0, 'degree': 5, 'gamma': 0.01, 'kernel': 'poly'}
+0.531 (+/-0.000) for {'coef0': 0, 'degree': 5, 'gamma': 0.001, 'kernel': 'poly'}
+0.531 (+/-0.000) for {'coef0': 0, 'degree': 5, 'gamma': 0.0001, 'kernel': 'poly'}
+0.821 (+/-0.034) for {'coef0': 1, 'degree': 2, 'gamma': 0.01, 'kernel': 'poly'}
+0.784 (+/-0.037) for {'coef0': 1, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+0.727 (+/-0.033) for {'coef0': 1, 'degree': 2, 'gamma': 0.0001, 'kernel': 'poly'}
+0.832 (+/-0.031) for {'coef0': 1, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+0.790 (+/-0.043) for {'coef0': 1, 'degree': 3, 'gamma': 0.001, 'kernel': 'poly'}
+0.756 (+/-0.040) for {'coef0': 1, 'degree': 3, 'gamma': 0.0001, 'kernel': 'poly'}
+0.836 (+/-0.029) for {'coef0': 1, 'degree': 4, 'gamma': 0.01, 'kernel': 'poly'}
+0.791 (+/-0.044) for {'coef0': 1, 'degree': 4, 'gamma': 0.001, 'kernel': 'poly'}
+0.765 (+/-0.042) for {'coef0': 1, 'degree': 4, 'gamma': 0.0001, 'kernel': 'poly'}
+0.837 (+/-0.022) for {'coef0': 1, 'degree': 5, 'gamma': 0.01, 'kernel': 'poly'}
+0.795 (+/-0.041) for {'coef0': 1, 'degree': 5, 'gamma': 0.001, 'kernel': 'poly'}
+0.771 (+/-0.036) for {'coef0': 1, 'degree': 5, 'gamma': 0.0001, 'kernel': 'poly'}
+0.829 (+/-0.037) for {'coef0': 0, 'gamma': 0.01, 'kernel': 'rbf'}
+0.795 (+/-0.041) for {'coef0': 0, 'gamma': 0.001, 'kernel': 'rbf'}
+0.727 (+/-0.035) for {'coef0': 0, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.829 (+/-0.037) for {'coef0': 1, 'gamma': 0.01, 'kernel': 'rbf'}
+0.795 (+/-0.041) for {'coef0': 1, 'gamma': 0.001, 'kernel': 'rbf'}
+0.727 (+/-0.035) for {'coef0': 1, 'gamma': 0.0001, 'kernel': 'rbf'}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+             precision    recall  f1-score   support
+
+          0       0.86      0.82      0.84      2473
+          1       0.80      0.84      0.82      2162
+
+avg / total       0.83      0.83      0.83      4635
+
+GB: 1490
+
+python audio.py  358.53s user 2.81s system 99% cpu 6:02.74 total

@@ -1,0 +1,68 @@
+Original shape: (12665, 784)
+{0.0, 1.0}
+
+/usr/lib/python3.6/site-packages/sklearn/utils/validation.py:475: DataConversionWarning: Data with input dtype uint8 was converted to float64 by StandardScaler.
+  warnings.warn(msg, DataConversionWarning)
+PCA shape: (6332, 182)
+# Tuning hyper-parameters for accuracy
+
+Fitting 10 folds for each of 36 candidates, totalling 360 fits
+[Parallel(n_jobs=1)]: Done 360 out of 360 | elapsed: 18.5min finished
+Best parameters set found on development set:
+
+{'coef0': 1, 'degree': 3, 'gamma': 0.001, 'kernel': 'poly'}
+
+Grid scores on development set:
+
+0.999 (+/-0.002) for {'coef0': 0, 'gamma': 0.01, 'kernel': 'linear'}
+0.999 (+/-0.002) for {'coef0': 0, 'gamma': 0.001, 'kernel': 'linear'}
+0.999 (+/-0.002) for {'coef0': 0, 'gamma': 0.0001, 'kernel': 'linear'}
+0.999 (+/-0.002) for {'coef0': 1, 'gamma': 0.01, 'kernel': 'linear'}
+0.999 (+/-0.002) for {'coef0': 1, 'gamma': 0.001, 'kernel': 'linear'}
+0.999 (+/-0.002) for {'coef0': 1, 'gamma': 0.0001, 'kernel': 'linear'}
+0.998 (+/-0.004) for {'coef0': 0, 'degree': 2, 'gamma': 0.01, 'kernel': 'poly'}
+0.997 (+/-0.005) for {'coef0': 0, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+0.572 (+/-0.010) for {'coef0': 0, 'degree': 2, 'gamma': 0.0001, 'kernel': 'poly'}
+1.000 (+/-0.001) for {'coef0': 0, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+0.994 (+/-0.007) for {'coef0': 0, 'degree': 3, 'gamma': 0.001, 'kernel': 'poly'}
+0.540 (+/-0.002) for {'coef0': 0, 'degree': 3, 'gamma': 0.0001, 'kernel': 'poly'}
+0.994 (+/-0.006) for {'coef0': 0, 'degree': 4, 'gamma': 0.01, 'kernel': 'poly'}
+0.869 (+/-0.019) for {'coef0': 0, 'degree': 4, 'gamma': 0.001, 'kernel': 'poly'}
+0.539 (+/-0.001) for {'coef0': 0, 'degree': 4, 'gamma': 0.0001, 'kernel': 'poly'}
+0.994 (+/-0.006) for {'coef0': 0, 'degree': 5, 'gamma': 0.01, 'kernel': 'poly'}
+0.746 (+/-0.028) for {'coef0': 0, 'degree': 5, 'gamma': 0.001, 'kernel': 'poly'}
+0.539 (+/-0.001) for {'coef0': 0, 'degree': 5, 'gamma': 0.0001, 'kernel': 'poly'}
+1.000 (+/-0.001) for {'coef0': 1, 'degree': 2, 'gamma': 0.01, 'kernel': 'poly'}
+1.000 (+/-0.001) for {'coef0': 1, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+0.999 (+/-0.002) for {'coef0': 1, 'degree': 2, 'gamma': 0.0001, 'kernel': 'poly'}
+1.000 (+/-0.001) for {'coef0': 1, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+1.000 (+/-0.001) for {'coef0': 1, 'degree': 3, 'gamma': 0.001, 'kernel': 'poly'}
+1.000 (+/-0.001) for {'coef0': 1, 'degree': 3, 'gamma': 0.0001, 'kernel': 'poly'}
+1.000 (+/-0.001) for {'coef0': 1, 'degree': 4, 'gamma': 0.01, 'kernel': 'poly'}
+1.000 (+/-0.001) for {'coef0': 1, 'degree': 4, 'gamma': 0.001, 'kernel': 'poly'}
+1.000 (+/-0.001) for {'coef0': 1, 'degree': 4, 'gamma': 0.0001, 'kernel': 'poly'}
+0.999 (+/-0.002) for {'coef0': 1, 'degree': 5, 'gamma': 0.01, 'kernel': 'poly'}
+1.000 (+/-0.001) for {'coef0': 1, 'degree': 5, 'gamma': 0.001, 'kernel': 'poly'}
+1.000 (+/-0.001) for {'coef0': 1, 'degree': 5, 'gamma': 0.0001, 'kernel': 'poly'}
+0.977 (+/-0.011) for {'coef0': 0, 'gamma': 0.01, 'kernel': 'rbf'}
+0.993 (+/-0.007) for {'coef0': 0, 'gamma': 0.001, 'kernel': 'rbf'}
+0.998 (+/-0.003) for {'coef0': 0, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.977 (+/-0.011) for {'coef0': 1, 'gamma': 0.01, 'kernel': 'rbf'}
+0.993 (+/-0.007) for {'coef0': 1, 'gamma': 0.001, 'kernel': 'rbf'}
+0.998 (+/-0.003) for {'coef0': 1, 'gamma': 0.0001, 'kernel': 'rbf'}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+             precision    recall  f1-score   support
+
+        0.0       1.00      1.00      1.00      3005
+        1.0       1.00      1.00      1.00      3328
+
+avg / total       1.00      1.00      1.00      6333
+
+GB: 683.1421121652097
+
+python svm2.py  1118.38s user 1.71s system 100% cpu 18:38.35 total
