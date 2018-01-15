@@ -1,0 +1,67 @@
+Original shape: (13668, 5013)
+[1. 1. 1. ... 0. 0. 1.]
+
+PCA shape: (6834, 2589)
+# Tuning hyper-parameters for accuracy
+
+Fitting 10 folds for each of 36 candidates, totalling 360 fits
+[Parallel(n_jobs=1)]: Done 360 out of 360 | elapsed:  5.4min finished
+
+Best parameters set found on development set:
+
+{'coef0': 1, 'degree': 5, 'gamma': 0.001, 'kernel': 'poly'}
+
+Grid scores on development set:
+
+0.288 (+/-0.065) for {'coef0': 0, 'gamma': 0.01, 'kernel': 'linear'}
+0.488 (+/-0.065) for {'coef0': 0, 'gamma': 0.001, 'kernel': 'linear'}
+0.588 (+/-0.065) for {'coef0': 0, 'gamma': 0.0001, 'kernel': 'linear'}
+0.588 (+/-0.065) for {'coef0': 1, 'gamma': 0.01, 'kernel': 'linear'}
+0.488 (+/-0.065) for {'coef0': 1, 'gamma': 0.001, 'kernel': 'linear'}
+0.288 (+/-0.065) for {'coef0': 1, 'gamma': 0.0001, 'kernel': 'linear'}
+0.115 (+/-0.102) for {'coef0': 0, 'degree': 2, 'gamma': 0.01, 'kernel': 'poly'}
+0.521 (+/-0.018) for {'coef0': 0, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+0.512 (+/-0.006) for {'coef0': 0, 'degree': 2, 'gamma': 0.0001, 'kernel': 'poly'}
+0.343 (+/-0.104) for {'coef0': 0, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+0.521 (+/-0.018) for {'coef0': 0, 'degree': 3, 'gamma': 0.001, 'kernel': 'poly'}
+0.411 (+/-0.003) for {'coef0': 0, 'degree': 3, 'gamma': 0.0001, 'kernel': 'poly'}
+0.393 (+/-0.082) for {'coef0': 0, 'degree': 4, 'gamma': 0.01, 'kernel': 'poly'}
+0.221 (+/-0.018) for {'coef0': 0, 'degree': 4, 'gamma': 0.001, 'kernel': 'poly'}
+0.111 (+/-0.003) for {'coef0': 0, 'degree': 4, 'gamma': 0.0001, 'kernel': 'poly'}
+0.415 (+/-0.077) for {'coef0': 0, 'degree': 5, 'gamma': 0.01, 'kernel': 'poly'}
+0.521 (+/-0.018) for {'coef0': 0, 'degree': 5, 'gamma': 0.001, 'kernel': 'poly'}
+0.511 (+/-0.003) for {'coef0': 0, 'degree': 5, 'gamma': 0.0001, 'kernel': 'poly'}
+0.514 (+/-0.116) for {'coef0': 1, 'degree': 2, 'gamma': 0.01, 'kernel': 'poly'}
+0.462 (+/-0.095) for {'coef0': 1, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+0.598 (+/-0.101) for {'coef0': 1, 'degree': 2, 'gamma': 0.0001, 'kernel': 'poly'}
+0.394 (+/-0.121) for {'coef0': 1, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+0.355 (+/-0.078) for {'coef0': 1, 'degree': 3, 'gamma': 0.001, 'kernel': 'poly'}
+0.208 (+/-0.096) for {'coef0': 1, 'degree': 3, 'gamma': 0.0001, 'kernel': 'poly'}
+0.667 (+/-0.111) for {'coef0': 1, 'degree': 4, 'gamma': 0.01, 'kernel': 'poly'}
+0.755 (+/-0.087) for {'coef0': 1, 'degree': 4, 'gamma': 0.001, 'kernel': 'poly'}
+0.717 (+/-0.103) for {'coef0': 1, 'degree': 4, 'gamma': 0.0001, 'kernel': 'poly'}
+0.599 (+/-0.104) for {'coef0': 1, 'degree': 5, 'gamma': 0.01, 'kernel': 'poly'}
+0.443 (+/-0.094) for {'coef0': 1, 'degree': 5, 'gamma': 0.001, 'kernel': 'poly'}
+0.420 (+/-0.095) for {'coef0': 1, 'degree': 5, 'gamma': 0.0001, 'kernel': 'poly'}
+0.392 (+/-0.098) for {'coef0': 0, 'gamma': 0.01, 'kernel': 'rbf'}
+0.115 (+/-0.079) for {'coef0': 0, 'gamma': 0.001, 'kernel': 'rbf'}
+0.417 (+/-0.094) for {'coef0': 0, 'gamma': 0.0001, 'kernel': 'rbf'}
+0.592 (+/-0.098) for {'coef0': 1, 'gamma': 0.01, 'kernel': 'rbf'}
+0.515 (+/-0.079) for {'coef0': 1, 'gamma': 0.001, 'kernel': 'rbf'}
+0.317 (+/-0.094) for {'coef0': 1, 'gamma': 0.0001, 'kernel': 'rbf'}
+
+Detailed classification report:
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+             precision    recall  f1-score   support
+
+        0.0       0.89      0.60      0.72       511
+        1.0       0.69      0.92      0.79       489
+
+avg / total       0.79      0.76      0.75      1000
+
+GB: 1684.9501639601444
+
+python sentiment.py  341.37s user 2.04s system 6% cpu 1:27:02.99 total
